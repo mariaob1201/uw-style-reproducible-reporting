@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ project.title | default("Data Report") }} — UW–Madison</title>
+  <style>
+    /* ── UW-Madison Design Tokens ─────────────────────────────────────── */
+    :root {
+      --uw-red:        #C5050C;
+      --uw-red-dark:   #9b0000;
+      --uw-red-light:  #fde8e8;
+      --uw-white:      #FFFFFF;
+      --uw-dark:       #282728;
+      --uw-gray:       #646569;
+      --uw-mid-gray:   #9ea0a3;
+      --uw-light-gray: #f7f7f7;
+      --uw-gold:       #f2a900;
+      --uw-gold-light: #fff3cd;
+      --uw-border:     #dadada;
+      --sidebar-w:     240px;
+      --font:          'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+    }
+
+    /* ── Reset ────────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 15px; }
+    body  { font-family: var(--font); background: #ebebeb; color: var(--uw-dark); line-height: 1.55; }
+    a     { color: var(--uw-red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img   { display: block; }
+
+    /* ── Header ───────────────────────────────────────────────────────── */
+    header {
+      background: var(--uw-red);
+      color: var(--uw-white);
+      padding: 22px 36px 20px;
+      border-bottom: 5px solid var(--uw-gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+    .uw-w {
+      font-size: 26px;
+      font-weight: 900;
+      background: var(--uw-white);
+      color: var(--uw-red);
+      padding: 2px 10px;
+      border-radius: 2px;
+      letter-spacing: -1px;
+      line-height: 1.2;
+    }
+    .header-inst {
+      font-size: 13px;
+      opacity: 0.85;
+      letter-spacing: 0.3px;
+    }
+    header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    .header-desc { font-size: 14px; opacity: 0.88; margin-top: 3px; }
+    .header-meta { font-size: 12px; opacity: 0.65; margin-top: 7px; }
+
+    /* ── Layout ───────────────────────────────────────────────────────── */
+    .layout {
+      display: flex;
+      align-items: flex-start;
+      min-height: calc(100vh - 108px);
+    }
+
+    /* ── Sidebar ──────────────────────────────────────────────────────── */
+    .sidebar {
+      width: var(--sidebar-w);
+      flex-shrink: 0;
+      background: var(--uw-dark);
+      color: var(--uw-white);
+      position: sticky;
+      top: 108px;           /* header height */
+      height: calc(100vh - 108px);
+      overflow-y: auto;
+      padding: 16px 0 32px;
+    }
+    .sidebar::-webkit-scrollbar { width: 4px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #555; border-radius: 2px; }
+
+    .sidebar-group-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--uw-mid-gray);
+      padding: 14px 18px 4px;
+    }
+    .sidebar a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 18px;
+      color: #c8c9cb;
+      font-size: 13px;
+      border-left: 3px solid transparent;
+      transition: all 0.15s;
+    }
+    .sidebar a:hover {
+      color: var(--uw-white);
+      background: rgba(255,255,255,0.06);
+      border-left-color: var(--uw-red);
+      text-decoration: none;
+    }
+    .nav-badge {
+      font-size: 9px;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .nb-dep { background: var(--uw-red);  color: #fff; }
+    .nb-ind { background: #444;           color: #ccc; }
+
+    /* ── Main ─────────────────────────────────────────────────────────── */
+    main {
+      flex: 1;
+      padding: 32px 40px 60px;
+      min-width: 0;
+    }
+
+    /* ── Sections ─────────────────────────────────────────────────────── */
+    .section { margin-bottom: 52px; }
+    .section-heading {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--uw-dark);
+      padding-left: 14px;
+      border-left: 5px solid var(--uw-red);
+      margin-bottom: 20px;
+    }
+
+    /* ── Cards ────────────────────────────────────────────────────────── */
+    .card {
+      background: var(--uw-white);
+      border: 1px solid var(--uw-border);
+      border-radius: 6px;
+      padding: 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--uw-light-gray);
+    }
+    .card-title { font-size: 17px; font-weight: 600; color: var(--uw-dark); }
+
+    /* ── Badges ───────────────────────────────────────────────────────── */
+    .badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 7px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+    .badge-dependent   { background: var(--uw-red-light); color: var(--uw-red);  border: 1px solid #f5b5b5; }
+    .badge-independent { background: #e8eaed;             color: var(--uw-gray); border: 1px solid #c5c8cc; }
+    .badge-continuous  { background: var(--uw-gold-light); color: #856404; }
+    .badge-categorical { background: #d1ecf1;              color: #0c5460; }
+    .badge-binary      { background: #d4edda;              color: #155724; }
+    .badge-ordinal     { background: #e2d9f3;              color: #5a2d91; }
+
+    /* ── Overview KPIs ────────────────────────────────────────────────── */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .kpi-box {
+      background: var(--uw-red);
+      color: var(--uw-white);
+      border-radius: 6px;
+      padding: 22px 16px;
+      text-align: center;
+    }
+    .kpi-box .kpi-num {
+      font-size: 36px;
+      font-weight: 800;
+      display: block;
+      line-height: 1;
+    }
+    .kpi-box .kpi-lbl {
+      font-size: 12px;
+      opacity: 0.82;
+      display: block;
+      margin-top: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Stat chips ───────────────────────────────────────────────────── */
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .stat-chip {
+      background: var(--uw-light-gray);
+      border: 1px solid var(--uw-border);
+      border-radius: 4px;
+      padding: 8px 14px;
+      text-align: center;
+      min-width: 90px;
+    }
+    .stat-chip .sv {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--uw-red);
+      display: block;
+    }
+    .stat-chip .sv.ok   { color: #2e7d44; }
+    .stat-chip .sv.warn { color: var(--uw-red); }
+    .stat-chip .sl {
+      font-size: 10px;
+      color: var(--uw-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* ── Plots ────────────────────────────────────────────────────────── */
+    .plot-img { max-width: 100%; border-radius: 4px; }
+
+    /* ── Bivariate grid ───────────────────────────────────────────────── */
+    .biv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      gap: 20px;
+    }
+    .biv-card {
+      background: var(--uw-white);
+      border: 1px solid var(--uw-border);
+      border-radius: 6px;
+      padding: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .biv-card h4 {
+      font-size: 13px;
+      color: var(--uw-gray);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    /* ── Alerts ───────────────────────────────────────────────────────── */
+    .alert {
+      padding: 11px 16px;
+      border-radius: 4px;
+      font-size: 13.5px;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .alert-info    { background: #e3f0f8; border-left: 4px solid #0071c5; color: #004880; }
+    .alert-warning { background: var(--uw-gold-light); border-left: 4px solid var(--uw-gold); color: #856404; }
+    .alert-danger  { background: var(--uw-red-light); border-left: 4px solid var(--uw-red); color: #7a0008; }
+
+    /* ── Model section ────────────────────────────────────────────────── */
+    .model-kpis {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .model-kpi {
+      background: var(--uw-white);
+      border: 1px solid var(--uw-border);
+      border-radius: 6px;
+      padding: 16px 24px;
+      text-align: center;
+      flex: 1;
+      min-width: 120px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .model-kpi .mk-val {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--uw-red);
+      display: block;
+    }
+    .model-kpi .mk-lbl {
+      font-size: 11px;
+      color: var(--uw-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* ── Statsmodels summary table overrides ──────────────────────────── */
+    .model-summary-wrap table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .model-summary-wrap table caption {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--uw-dark);
+      padding: 6px 0;
+      text-align: left;
+      caption-side: top;
+    }
+    .model-summary-wrap table th {
+      background: var(--uw-dark);
+      color: var(--uw-white);
+      padding: 6px 10px;
+      text-align: left;
+    }
+    .model-summary-wrap table td {
+      padding: 5px 10px;
+      border-bottom: 1px solid #eee;
+    }
+    .model-summary-wrap table tr:nth-child(even) td { background: var(--uw-light-gray); }
+    .model-summary-wrap table tr:hover td { background: #fde8e8; }
+
+    /* ── Footer ───────────────────────────────────────────────────────── */
+    footer {
+      background: var(--uw-dark);
+      color: var(--uw-mid-gray);
+      padding: 18px 36px;
+      text-align: center;
+      font-size: 12.5px;
+      margin-top: 40px;
+    }
+    footer .uw-footer-brand { color: var(--uw-red); font-weight: 700; }
+    footer .footer-bar {
+      width: 60px;
+      height: 3px;
+      background: var(--uw-red);
+      margin: 8px auto;
+    }
+
+    /* ── Responsive ───────────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .sidebar { display: none; }
+      main { padding: 20px; }
+      .overview-grid { grid-template-columns: repeat(2, 1fr); }
+      .biv-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════════════════════════ -->
+<header>
+  <div class="header-brand">
+    <span class="uw-w">W</span>
+    <span class="header-inst">University of Wisconsin–Madison</span>
+  </div>
+  <h1>{{ project.title | default("Data Exploration Report") }}</h1>
+  {% if project.description %}
+  <div class="header-desc">{{ project.description }}</div>
+  {% endif %}
+  <div class="header-meta">
+    {% if project.author %}By <strong>{{ project.author }}</strong> · {% endif %}
+    Generated {{ generated_at }} &nbsp;·&nbsp; Config: <code>{{ config_path }}</code>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SIDEBAR
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <nav class="sidebar">
+    <div class="sidebar-group-label">Report</div>
+    <a href="#overview">&#9776; &nbsp;Overview</a>
+
+    <div class="sidebar-group-label">Variables</div>
+    {% for var in var_sections %}
+    <a href="#var-{{ var.name }}">
+      {{ var.label }}
+      <span class="nav-badge {{ 'nb-dep' if var.role == 'dependent' else 'nb-ind' }}">
+        {{ "DEP" if var.role == "dependent" else "IND" }}
+      </span>
+    </a>
+    {% endfor %}
+
+    <div class="sidebar-group-label">Analysis</div>
+    {% if corr_plot %}
+    <a href="#correlation">&#8652; &nbsp;Correlation</a>
+    {% endif %}
+    {% if bivariate_plots %}
+    <a href="#bivariate">&#8599; &nbsp;Bivariate</a>
+    {% endif %}
+    {% if model_results %}
+    <a href="#model">&#9711; &nbsp;Model</a>
+    {% endif %}
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       MAIN
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <main>
+
+    <!-- ── Dataset Overview ─────────────────────────────────────────── -->
+    <section class="section" id="overview">
+      <h2 class="section-heading">Dataset Overview</h2>
+      <div class="overview-grid">
+        <div class="kpi-box">
+          <span class="kpi-num">{{ overview.n_rows }}</span>
+          <span class="kpi-lbl">Observations</span>
+        </div>
+        <div class="kpi-box">
+          <span class="kpi-num">{{ overview.n_cols }}</span>
+          <span class="kpi-lbl">Columns</span>
+        </div>
+        <div class="kpi-box">
+          <span class="kpi-num">{{ overview.n_missing }}</span>
+          <span class="kpi-lbl">Missing Cells</span>
+        </div>
+        <div class="kpi-box">
+          <span class="kpi-num">{{ overview.missing_pct }}</span>
+          <span class="kpi-lbl">Missing Rate</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Per-variable EDA ──────────────────────────────────────────── -->
+    {% for var in var_sections %}
+    <section class="section" id="var-{{ var.name }}">
+      <h2 class="section-heading">{{ var.label }}</h2>
+      <div class="card">
+
+        <div class="card-header">
+          <span class="card-title">{{ var.label }}</span>
+          <span class="badge badge-{{ var.role }}">{{ var.role | title }}</span>
+          <span class="badge badge-{{ var.type }}">{{ var.type | title }}</span>
+        </div>
+
+        <!-- Summary chips -->
+        <div class="stats-row">
+          <div class="stat-chip">
+            <span class="sv">{{ var.stats.n }}</span>
+            <span class="sl">N</span>
+          </div>
+          <div class="stat-chip">
+            <span class="sv {{ 'warn' if var.stats.missing > 0 else 'ok' }}">
+              {{ var.stats.missing }}
+            </span>
+            <span class="sl">Missing ({{ var.stats.missing_pct }})</span>
+          </div>
+
+          {% if var.type == "continuous" %}
+          <div class="stat-chip">
+            <span class="sv">{{ var.stats.mean }}</span>
+            <span class="sl">Mean</span>
+          </div>
+          <div class="stat-chip">
+            <span class="sv">{{ var.stats.std }}</span>
+            <span class="sl">Std Dev</span>
+          </div>
+          <div class="stat-chip">
+            <span class="sv">{{ var.stats.median }}</span>
+            <span class="sl">Median</span>
+          </div>
+          <div class="stat-chip">
+            <span class="sv">{{ var.stats.min }}</span>
+            <span class="sl">Min</span>
+          </div>
+          <div class="stat-chip">
+            <span class="sv">{{ var.stats.q25 }}</span>
+            <span class="sl">Q25</span>
+          </div>
+          <div class="stat-chip">
+            <span class="sv">{{ var.stats.q75 }}</span>
+            <span class="sl">Q75</span>
+          </div>
+          <div class="stat-chip">
+            <span class="sv">{{ var.stats.max }}</span>
+            <span class="sl">Max</span>
+          </div>
+          <div class="stat-chip">
+            <span class="sv">{{ var.stats.skewness }}</span>
+            <span class="sl">Skewness</span>
+          </div>
+          <div class="stat-chip">
+            <span class="sv">{{ var.stats.kurtosis }}</span>
+            <span class="sl">Kurtosis</span>
+          </div>
+          {% else %}
+          <div class="stat-chip">
+            <span class="sv">{{ var.stats.n_unique }}</span>
+            <span class="sl">Unique</span>
+          </div>
+          <div class="stat-chip">
+            <span class="sv" style="font-size:13px; padding-top:3px;">{{ var.stats.mode }}</span>
+            <span class="sl">Mode</span>
+          </div>
+          <div class="stat-chip">
+            <span class="sv" style="font-size:13px; padding-top:3px;">{{ var.stats.mode_freq }}</span>
+            <span class="sl">Mode Freq</span>
+          </div>
+          {% endif %}
+        </div>
+
+        <!-- Plot -->
+        <img src="data:image/png;base64,{{ var.plot }}"
+             class="plot-img"
+             alt="Plot of {{ var.label }}">
+      </div>
+    </section>
+    {% endfor %}
+
+    <!-- ── Correlation Matrix ─────────────────────────────────────────── -->
+    {% if corr_plot %}
+    <section class="section" id="correlation">
+      <h2 class="section-heading">Correlation Matrix</h2>
+      <div class="card">
+        <div class="alert alert-info">
+          Pearson correlation coefficients among all continuous variables.
+          Values near <strong>&plusmn;1</strong> indicate strong linear association;
+          near <strong>0</strong> indicates no linear relationship.
+        </div>
+        <img src="data:image/png;base64,{{ corr_plot }}"
+             class="plot-img"
+             alt="Correlation matrix">
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- ── Bivariate Analysis ─────────────────────────────────────────── -->
+    {% if bivariate_plots %}
+    <section class="section" id="bivariate">
+      <h2 class="section-heading">Bivariate Analysis</h2>
+      <div class="alert alert-info">
+        Pairwise relationships between each independent variable and the dependent variable.
+        Dashed lines show OLS trend; boxes show interquartile ranges.
+      </div>
+      <div class="biv-grid">
+        {% for bv in bivariate_plots %}
+        <div class="biv-card">
+          <h4>{{ bv.title }}</h4>
+          <img src="data:image/png;base64,{{ bv.plot }}"
+               class="plot-img"
+               alt="{{ bv.title }}">
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- ── Model Results ──────────────────────────────────────────────── -->
+    {% if model_results %}
+    <section class="section" id="model">
+      <h2 class="section-heading">Model Results</h2>
+
+      {% if model_results.error %}
+      <div class="alert alert-danger">
+        <strong>Model failed:</strong> {{ model_results.error }}
+      </div>
+
+      {% else %}
+      {% if model_results.description %}
+      <div class="alert alert-info">{{ model_results.description }}</div>
+      {% endif %}
+
+      <!-- KPI bar -->
+      <div class="model-kpis">
+        <div class="model-kpi">
+          <span class="mk-val" style="font-size:16px; padding-top:4px;">
+            {{ model_results.type | replace("_", " ") | title }}
+          </span>
+          <span class="mk-lbl">Model Type</span>
+        </div>
+        <div class="model-kpi">
+          <span class="mk-val">{{ model_results.n_obs }}</span>
+          <span class="mk-lbl">Observations</span>
+        </div>
+        {% if model_results.r_squared is defined %}
+        <div class="model-kpi">
+          <span class="mk-val">{{ model_results.r_squared }}</span>
+          <span class="mk-lbl">R²</span>
+        </div>
+        <div class="model-kpi">
+          <span class="mk-val">{{ model_results.adj_r_squared }}</span>
+          <span class="mk-lbl">Adj. R²</span>
+        </div>
+        <div class="model-kpi">
+          <span class="mk-val">{{ model_results.f_pvalue }}</span>
+          <span class="mk-lbl">F-test p-value</span>
+        </div>
+        {% endif %}
+        {% if model_results.pseudo_r_squared is defined %}
+        <div class="model-kpi">
+          <span class="mk-val">{{ model_results.pseudo_r_squared }}</span>
+          <span class="mk-lbl">McFadden R²</span>
+        </div>
+        <div class="model-kpi">
+          <span class="mk-val">{{ model_results.llr_pvalue }}</span>
+          <span class="mk-lbl">LLR p-value</span>
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- statsmodels HTML summary -->
+      {% if model_results.summary_html %}
+      <div class="card">
+        <h3 style="margin-bottom:14px; font-size:15px; color:var(--uw-dark);">
+          Regression Summary Table
+        </h3>
+        <div class="model-summary-wrap">
+          {{ model_results.summary_html | safe }}
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Diagnostic plots -->
+      {% if model_results.residual_plot %}
+      <div class="card">
+        <h3 style="margin-bottom:14px; font-size:15px; color:var(--uw-dark);">
+          Diagnostic Plots
+        </h3>
+        <div class="alert alert-info" style="margin-bottom:14px;">
+          Left: residuals vs. fitted values (no pattern = good fit).
+          Right: Q-Q plot (points on line = normally distributed residuals).
+        </div>
+        <img src="data:image/png;base64,{{ model_results.residual_plot }}"
+             class="plot-img"
+             alt="Residual diagnostic plots">
+      </div>
+      {% endif %}
+
+      {% endif %}{# end if error #}
+    </section>
+    {% endif %}
+
+  </main>{# end main #}
+</div>{# end layout #}
+
+<footer>
+  <div class="footer-bar"></div>
+  <span class="uw-footer-brand">University of Wisconsin–Madison</span>
+  &nbsp;·&nbsp; Reproducible Report Framework
+  &nbsp;·&nbsp; Generated {{ generated_at }}
+</footer>
+
+</body>
+</html>

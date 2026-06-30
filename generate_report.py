@@ -321,15 +321,15 @@ def fit_model(df: pd.DataFrame, config: dict,
         import statsmodels.api as sm
 
         df_m = df[[c for c in all_cols if c in df.columns]].dropna()
-        df_enc = pd.get_dummies(df_m, columns=[c for c in ind_cols
-                                                if df_m[c].dtype == object],
-                                drop_first=True)
+        cat_cols = [c for c in ind_cols
+                    if not pd.api.types.is_numeric_dtype(df_m[c])]
+        df_enc = pd.get_dummies(df_m, columns=cat_cols, drop_first=True)
         # Ensure bool columns are int
         bool_cols = df_enc.select_dtypes(include="bool").columns
         df_enc[bool_cols] = df_enc[bool_cols].astype(int)
 
-        y = df_enc[dep_col]
-        X = df_enc.drop(columns=[dep_col])
+        y = df_enc[dep_col].astype(float)
+        X = df_enc.drop(columns=[dep_col]).astype(float)
         X_c = sm.add_constant(X)
 
         out = {
