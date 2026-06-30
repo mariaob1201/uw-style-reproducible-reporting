@@ -90,12 +90,46 @@ model:
 
 ### Supported models
 
-| Model type | When to use | Dependent variable |
-|---|---|---|
-| `linear_regression` | Continuous outcome (OLS via statsmodels) | `continuous` |
-| `logistic_regression` | Binary outcome (Logit via statsmodels) | `binary` or `categorical` with 2 levels |
+| Model type | When to use | Key config fields | Report output |
+|---|---|---|---|
+| `linear_regression` | Continuous outcome | — | R², Adj. R², F-test, residual plots |
+| `logistic_regression` | Binary outcome | — | McFadden R², LLR p-value, residual plots |
+| `glm` | Count / skewed / proportions | `family:` | AIC, deviance, family-specific diagnostics |
+| `mixed_linear` | Clustered / repeated-measures | `group_col:` | Random effects, ICC, AIC, log-likelihood |
+| `ab_test` | Two-group comparison | `treatment_col:`, `control_label:`, `treatment_label:`, `test:` | Effect size, CI, significance conclusion, distribution plots |
 
 Categorical independent variables are automatically one-hot encoded. Missing rows are dropped before model fitting.
+
+#### GLM families
+
+```yaml
+model:
+  type: "glm"
+  family: "poisson"    # gaussian | poisson | negative_binomial | binomial
+                       # gamma | inverse_gaussian | tweedie
+```
+
+#### Mixed linear effects
+
+```yaml
+model:
+  type: "mixed_linear"
+  group_col: "school_id"   # column used as random-intercept grouping factor
+```
+
+#### A/B test
+
+```yaml
+model:
+  type: "ab_test"
+  treatment_col: "variant"      # column containing group labels
+  control_label: "control"      # exact string for the control arm
+  treatment_label: "treatment"  # exact string for the treatment arm
+  test: "auto"     # auto | t_test | mannwhitney | proportion | chi2
+  alpha: 0.05
+  # auto selection: t_test for continuous outcomes,
+  #                 proportion for binary, chi2 for categorical
+```
 
 ---
 
@@ -103,11 +137,15 @@ Categorical independent variables are automatically one-hot encoded. Missing row
 
 ```
 uw-style-reproducible-reporting/
-├── config.yaml              # ← edit this for your data
+├── config.yaml              # ← default example (linear regression)
 ├── generate_report.py       # ← run this
 ├── requirements.txt
+├── configs/
+│   ├── glm_poisson.yaml     # GLM Poisson example
+│   ├── mixed_linear.yaml    # Linear mixed effects example
+│   └── ab_test.yaml         # Two-sample A/B test example
 ├── data/
-│   ├── create_sample.py     # generates demo CSV
+│   ├── create_sample.py     # generates demo CSV (run once)
 │   └── sample_employees.csv # 350-row synthetic demo dataset
 └── templates/
     └── report.html.j2       # Jinja2 template (UW-Madison CSS)

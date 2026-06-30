@@ -1,0 +1,41 @@
+project:
+  title: "Training Session Attendance — GLM (Poisson)"
+  description: "Poisson regression modeling count of training sessions attended"
+  author: "UW-Madison Research Team"
+
+data:
+  path: "data/sample_employees.csv"
+  delimiter: ","
+
+variables:
+  - name: "training_sessions"
+    type: "continuous"
+    role: "dependent"
+    label: "Training Sessions Attended"
+
+  - name: "years_experience"
+    type: "continuous"
+    role: "independent"
+    label: "Years of Experience"
+
+  - name: "age"
+    type: "continuous"
+    role: "independent"
+    label: "Age (years)"
+
+  - name: "education_level"
+    type: "categorical"
+    role: "independent"
+    label: "Education Level"
+
+  - name: "department"
+    type: "categorical"
+    role: "independent"
+    label: "Department"
+
+# GLM config
+# family options: gaussian | poisson | negative_binomial | binomial | gamma | inverse_gaussian | tweedie
+model:
+  type: "glm"
+  family: "poisson"
+  description: "Poisson GLM predicting training session count from experience, age, education, and department. Log link is applied automatically."

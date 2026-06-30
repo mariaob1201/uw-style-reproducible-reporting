@@ -309,6 +309,74 @@
       margin-top: 4px;
     }
 
+    /* ── A/B Test layout ──────────────────────────────────────────────── */
+    .ab-groups {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .ab-group {
+      background: var(--uw-white);
+      border: 1px solid var(--uw-border);
+      border-radius: 6px;
+      padding: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .ab-group.ctrl  { border-top: 4px solid var(--uw-gray); }
+    .ab-group.trt   { border-top: 4px solid var(--uw-red);  }
+    .ab-group-name  {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.7px; margin-bottom: 12px;
+    }
+    .ab-group.ctrl .ab-group-name { color: var(--uw-gray); }
+    .ab-group.trt  .ab-group-name { color: var(--uw-red);  }
+    .ab-stat-row {
+      display: flex; justify-content: space-between;
+      padding: 5px 0;
+      border-bottom: 1px solid var(--uw-light-gray);
+      font-size: 13.5px;
+    }
+    .ab-stat-row:last-child { border-bottom: none; }
+    .ab-stat-key { color: var(--uw-gray); font-size: 12px; text-transform: uppercase; letter-spacing: 0.3px; }
+    .ab-stat-val { font-weight: 600; color: var(--uw-dark); }
+
+    /* Test result card */
+    .test-result-card {
+      background: var(--uw-white);
+      border: 1px solid var(--uw-border);
+      border-radius: 6px;
+      padding: 22px 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .test-result-card.is-sig     { border-top: 4px solid #2e7d44; }
+    .test-result-card.is-not-sig { border-top: 4px solid var(--uw-gray); }
+    .test-result-name { font-size: 15px; font-weight: 700; color: var(--uw-dark); margin-bottom: 14px; }
+    .test-stats-row {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px;
+    }
+    .test-stat-chip {
+      background: var(--uw-light-gray);
+      border: 1px solid var(--uw-border);
+      border-radius: 4px;
+      padding: 9px 16px;
+      text-align: center;
+    }
+    .test-stat-chip .tsc-val { font-size: 17px; font-weight: 700; color: var(--uw-dark); display: block; }
+    .test-stat-chip .tsc-lbl { font-size: 10px; color: var(--uw-gray); text-transform: uppercase; letter-spacing: 0.4px; display: block; margin-top: 2px; }
+    .test-conclusion {
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .test-conclusion.sig     { background: #d4edda; color: #155724; }
+    .test-conclusion.not-sig { background: #e8eaed; color: var(--uw-gray); }
+
     /* ── Statsmodels summary table overrides ──────────────────────────── */
     .model-summary-wrap table {
       width: 100%;
@@ -576,7 +644,103 @@
         <strong>Model failed:</strong> {{ model_results.error }}
       </div>
 
+      {# ═══════════════════════════════════════════════════════════════════
+         A/B TEST
+      ════════════════════════════════════════════════════════════════════ #}
+      {% elif model_results.type == "ab_test" %}
+
+      {% if model_results.description %}
+      <div class="alert alert-info">{{ model_results.description }}</div>
+      {% endif %}
+
+      <!-- Group summary cards -->
+      <div class="ab-groups">
+        {% for grp, cls in [(model_results.ctrl_stats, "ctrl"), (model_results.trt_stats, "trt")] %}
+        <div class="ab-group {{ cls }}">
+          <div class="ab-group-name">
+            {{ "Control" if cls == "ctrl" else "Treatment" }} &mdash; {{ grp.label }}
+          </div>
+          {% if model_results.is_numeric %}
+          {% for key, lbl in [("n","N"), ("mean","Mean"), ("std","Std Dev"), ("median","Median"), ("min","Min"), ("max","Max")] %}
+          <div class="ab-stat-row">
+            <span class="ab-stat-key">{{ lbl }}</span>
+            <span class="ab-stat-val">{{ grp[key] }}</span>
+          </div>
+          {% endfor %}
+          {% else %}
+          {% for key, lbl in [("n","N"), ("mode","Mode"), ("mode_pct","Mode %")] %}
+          <div class="ab-stat-row">
+            <span class="ab-stat-key">{{ lbl }}</span>
+            <span class="ab-stat-val">{{ grp[key] }}</span>
+          </div>
+          {% endfor %}
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Test result card -->
+      <div class="test-result-card {{ 'is-sig' if model_results.significant else 'is-not-sig' }}">
+        <div class="test-result-name">{{ model_results.test_name }}</div>
+        <div class="test-stats-row">
+          <div class="test-stat-chip">
+            <span class="tsc-val">{{ model_results.statistic }}</span>
+            <span class="tsc-lbl">{{ model_results.stat_label }}</span>
+          </div>
+          <div class="test-stat-chip">
+            <span class="tsc-val">{{ model_results.pvalue }}</span>
+            <span class="tsc-lbl">p-value</span>
+          </div>
+          <div class="test-stat-chip">
+            <span class="tsc-val">{{ model_results.alpha }}</span>
+            <span class="tsc-lbl">α</span>
+          </div>
+          {% if model_results.effect %}
+          <div class="test-stat-chip">
+            <span class="tsc-val" style="font-size:14px; padding-top:2px;">{{ model_results.effect }}</span>
+            <span class="tsc-lbl">Effect</span>
+          </div>
+          {% endif %}
+          {% if model_results.ci %}
+          <div class="test-stat-chip">
+            <span class="tsc-val" style="font-size:13px; padding-top:3px;">{{ model_results.ci }}</span>
+            <span class="tsc-lbl">Confidence Interval</span>
+          </div>
+          {% endif %}
+          {% if model_results.effect_size %}
+          <div class="test-stat-chip">
+            <span class="tsc-val" style="font-size:13px; padding-top:3px;">{{ model_results.effect_size }}</span>
+            <span class="tsc-lbl">Effect Size</span>
+          </div>
+          {% endif %}
+        </div>
+        <div class="test-conclusion {{ 'sig' if model_results.significant else 'not-sig' }}">
+          {% if model_results.significant %}
+          &#10003; Statistically significant at &alpha; = {{ model_results.alpha }} &mdash;
+          sufficient evidence to reject H&#8320;.
+          {% else %}
+          &#9679; Not statistically significant at &alpha; = {{ model_results.alpha }} &mdash;
+          insufficient evidence to reject H&#8320;.
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Distribution comparison plot -->
+      {% if model_results.dist_plot %}
+      <div class="card">
+        <h3 style="margin-bottom:12px; font-size:15px; color:var(--uw-dark);">
+          Distribution Comparison — {{ model_results.dep_label }}
+        </h3>
+        <img src="data:image/png;base64,{{ model_results.dist_plot }}"
+             class="plot-img" alt="A/B distribution comparison">
+      </div>
+      {% endif %}
+
+      {# ═══════════════════════════════════════════════════════════════════
+         REGRESSION MODELS (OLS, logit, GLM, mixed LM)
+      ════════════════════════════════════════════════════════════════════ #}
       {% else %}
+
       {% if model_results.description %}
       <div class="alert alert-info">{{ model_results.description }}</div>
       {% endif %}
@@ -584,7 +748,7 @@
       <!-- KPI bar -->
       <div class="model-kpis">
         <div class="model-kpi">
-          <span class="mk-val" style="font-size:16px; padding-top:4px;">
+          <span class="mk-val" style="font-size:15px; padding-top:5px;">
             {{ model_results.type | replace("_", " ") | title }}
           </span>
           <span class="mk-lbl">Model Type</span>
@@ -593,6 +757,8 @@
           <span class="mk-val">{{ model_results.n_obs }}</span>
           <span class="mk-lbl">Observations</span>
         </div>
+
+        {# Linear regression #}
         {% if model_results.r_squared is defined %}
         <div class="model-kpi">
           <span class="mk-val">{{ model_results.r_squared }}</span>
@@ -607,6 +773,8 @@
           <span class="mk-lbl">F-test p-value</span>
         </div>
         {% endif %}
+
+        {# Logistic regression #}
         {% if model_results.pseudo_r_squared is defined %}
         <div class="model-kpi">
           <span class="mk-val">{{ model_results.pseudo_r_squared }}</span>
@@ -617,13 +785,46 @@
           <span class="mk-lbl">LLR p-value</span>
         </div>
         {% endif %}
+
+        {# GLM #}
+        {% if model_results.family is defined %}
+        <div class="model-kpi">
+          <span class="mk-val" style="font-size:18px;">{{ model_results.family | title }}</span>
+          <span class="mk-lbl">Family</span>
+        </div>
+        <div class="model-kpi">
+          <span class="mk-val">{{ model_results.aic }}</span>
+          <span class="mk-lbl">AIC</span>
+        </div>
+        <div class="model-kpi">
+          <span class="mk-val">{{ model_results.deviance }}</span>
+          <span class="mk-lbl">Deviance</span>
+        </div>
+        {% endif %}
+
+        {# Mixed linear #}
+        {% if model_results.n_groups is defined %}
+        <div class="model-kpi">
+          <span class="mk-val">{{ model_results.n_groups }}</span>
+          <span class="mk-lbl">Groups ({{ model_results.group_col }})</span>
+        </div>
+        <div class="model-kpi">
+          <span class="mk-val">{{ model_results.aic }}</span>
+          <span class="mk-lbl">AIC</span>
+        </div>
+        <div class="model-kpi">
+          <span class="mk-val">{{ model_results.log_likelihood }}</span>
+          <span class="mk-lbl">Log-Likelihood</span>
+        </div>
+        {% endif %}
       </div>
 
       <!-- statsmodels HTML summary -->
       {% if model_results.summary_html %}
       <div class="card">
         <h3 style="margin-bottom:14px; font-size:15px; color:var(--uw-dark);">
-          Regression Summary Table
+          {% if model_results.type == "mixed_linear" %}Mixed Effects{% else %}Regression{% endif %}
+          Summary Table
         </h3>
         <div class="model-summary-wrap">
           {{ model_results.summary_html | safe }}
@@ -642,12 +843,11 @@
           Right: Q-Q plot (points on line = normally distributed residuals).
         </div>
         <img src="data:image/png;base64,{{ model_results.residual_plot }}"
-             class="plot-img"
-             alt="Residual diagnostic plots">
+             class="plot-img" alt="Residual diagnostic plots">
       </div>
       {% endif %}
 
-      {% endif %}{# end if error #}
+      {% endif %}{# end model type switch #}
     </section>
     {% endif %}
 

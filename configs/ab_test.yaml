@@ -1,0 +1,46 @@
+project:
+  title: "Compensation Intervention A/B Test"
+  description: "Two-sample comparison of salary outcomes between control and treatment groups"
+  author: "UW-Madison Research Team"
+
+data:
+  path: "data/sample_employees.csv"
+  delimiter: ","
+
+# For an A/B test, declare the metric as 'dependent' and list any
+# background variables you want EDA on as 'independent'.
+variables:
+  - name: "salary_ab"
+    type: "continuous"
+    role: "dependent"
+    label: "Annual Salary ($)"
+
+  - name: "variant"
+    type: "categorical"
+    role: "independent"
+    label: "Study Variant"
+
+  - name: "education_level"
+    type: "categorical"
+    role: "independent"
+    label: "Education Level"
+
+  - name: "department"
+    type: "categorical"
+    role: "independent"
+    label: "Department"
+
+# A/B test config
+# treatment_col: column containing the group labels
+# control_label / treatment_label: exact string values in that column
+# test options: auto | t_test | mannwhitney | proportion | chi2
+#   auto → t_test for continuous outcomes, proportion for binary, chi2 for categorical
+# alpha: significance level (default 0.05)
+model:
+  type: "ab_test"
+  treatment_col: "variant"
+  control_label: "control"
+  treatment_label: "treatment"
+  test: "t_test"
+  alpha: 0.05
+  description: "Welch's two-sample t-test comparing mean salary between the control and treatment arms of the compensation intervention."

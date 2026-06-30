@@ -1,0 +1,48 @@
+project:
+  title: "Salary Analysis with Regional Random Effects"
+  description: "Linear mixed effects model accounting for regional clustering in compensation"
+  author: "UW-Madison Research Team"
+
+data:
+  path: "data/sample_employees.csv"
+  delimiter: ","
+
+variables:
+  - name: "salary"
+    type: "continuous"
+    role: "dependent"
+    label: "Annual Salary ($)"
+
+  - name: "years_experience"
+    type: "continuous"
+    role: "independent"
+    label: "Years of Experience"
+
+  - name: "age"
+    type: "continuous"
+    role: "independent"
+    label: "Age (years)"
+
+  - name: "education_level"
+    type: "categorical"
+    role: "independent"
+    label: "Education Level"
+
+  - name: "department"
+    type: "categorical"
+    role: "independent"
+    label: "Department"
+
+  - name: "region"
+    type: "categorical"
+    role: "id"       # listed so it appears in EDA; used as group_col below
+    label: "Region"
+
+# Mixed linear effects config
+# group_col: column whose levels define the random intercepts.
+# Fixed effects are all 'independent' variables above.
+# Random effects: random intercept per group (default MixedLM behavior).
+model:
+  type: "mixed_linear"
+  group_col: "region"
+  description: "Linear mixed effects model with random intercepts by region. Fixed effects: experience, age, education, department."

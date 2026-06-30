@@ -1,351 +1,351 @@
-salary,years_experience,age,education_level,department
-89700,10.4,31,Bachelor,Finance
-182000,19.7,38,PhD,Research
-122800,8.2,29,Master,Finance
-100100,11.3,34,Bachelor,Engineering
-134400,27.2,48,High School,Engineering
-101900,12.2,32,High School,Finance
-122000,25.6,46,High School,Engineering
-98200,5.0,26,Master,Finance
-132200,23.1,43,Bachelor,Research
-156400,32.3,52,Master,Finance
-46900,2.8,22,High School,Marketing
-121300,9.3,30,PhD,Finance
-126000,20.7,43,Master,Marketing
-97000,13.3,35,Bachelor,Finance
-135500,21.4,41,Bachelor,Research
-63800,7.4,31,Bachelor,Marketing
-125100,16.7,38,Bachelor,Research
-121200,13.2,36,Bachelor,Research
-125100,27.1,49,Bachelor,Engineering
-130800,20.6,40,Bachelor,Engineering
-135600,19.4,41,Bachelor,Engineering
-79800,11.1,33,High School,Engineering
-113000,8.3,33,Bachelor,Engineering
-89800,12.5,33,Bachelor,Operations
-120400,20.3,41,Bachelor,Engineering
-112200,15.3,33,Master,Marketing
-128800,17.4,40,Bachelor,Research
-166000,36.4,58,Bachelor,Engineering
-119600,24.5,46,Bachelor,Operations
-74200,15.2,34,High School,Marketing
-146200,,50,Bachelor,Engineering
-57100,11.6,33,High School,Operations
-59900,1.2,22,High School,Finance
-124800,5.4,27,PhD,Research
-87400,0.0,22,PhD,Operations
-112900,12.4,34,Master,Operations
-113300,,38,Bachelor,Marketing
-141200,29.9,54,High School,Engineering
-108500,19.3,41,Master,Operations
-81000,11.6,35,Bachelor,Operations
-142300,26.4,46,High School,Research
-61300,0.0,22,Bachelor,Marketing
-107400,16.9,40,High School,Marketing
-154700,23.8,45,PhD,Operations
-71600,4.1,23,Bachelor,Marketing
-159800,26.9,49,Master,Research
-126200,17.9,41,Bachelor,Research
-94100,14.8,33,Bachelor,Marketing
-108200,19.1,44,Bachelor,Operations
-145300,33.6,60,Bachelor,Operations
-151900,17.9,39,PhD,Engineering
-126800,17.0,40,Master,Research
-115100,9.0,33,PhD,Finance
-144700,8.4,29,PhD,Research
-108900,24.5,46,Bachelor,Marketing
-114800,5.9,29,PhD,Research
-81700,13.4,38,High School,Marketing
-130900,12.7,33,Bachelor,Engineering
-119100,21.3,42,High School,Research
-130700,18.8,41,Bachelor,Engineering
-132000,29.7,48,Bachelor,Marketing
-100100,7.9,32,Bachelor,Research
-130000,9.9,35,Master,Research
-80400,4.6,28,Bachelor,Finance
-100600,10.9,33,Bachelor,Finance
-109700,19.5,41,Bachelor,Marketing
-94000,22.5,45,High School,Marketing
-101000,6.7,28,Master,Marketing
-92000,21.5,46,High School,Operations
-163800,31.9,51,PhD,Operations
-124300,19.8,42,Master,Operations
-134800,36.2,56,Bachelor,Operations
-85100,8.7,30,High School,Engineering
-97300,3.9,25,Master,Finance
-106400,1.1,22,Master,Engineering
-166400,30.9,52,Master,Finance
-131700,23.3,44,Master,Marketing
-117800,17.7,37,High School,Research
-116700,18.4,40,Bachelor,Marketing
-82000,,26,High School,Engineering
-189600,39.8,62,Master,Engineering
-108000,19.9,39,Master,Operations
-99900,15.6,39,Bachelor,Finance
-125100,26.6,45,High School,Engineering
-120300,19.9,42,Bachelor,Engineering
-90600,15.1,40,Bachelor,Operations
-114400,8.3,30,Master,Engineering
-147400,18.6,42,Master,Research
-179000,35.7,56,PhD,Operations
-148900,27.7,51,Bachelor,Engineering
-136800,30.1,53,High School,Engineering
-95100,6.2,32,Master,Research
-79800,5.1,28,Master,Marketing
-80800,9.2,36,Bachelor,Marketing
-91800,12.8,38,Master,Operations
-153400,27.5,48,Bachelor,Research
-99600,1.6,22,Bachelor,Research
-143500,31.9,53,Bachelor,Operations
-73100,12.1,36,High School,Marketing
-103600,10.9,33,High School,Engineering
-55300,5.0,27,High School,Operations
-85000,0.0,22,Master,Finance
-119300,27.0,46,Bachelor,Marketing
-122000,17.8,38,Bachelor,Research
-118700,,25,PhD,Engineering
-81000,3.1,25,Bachelor,Finance
-109200,12.4,34,Bachelor,Engineering
-155000,27.9,54,Master,Finance
-111900,12.5,35,Bachelor,Engineering
-74700,0.0,22,High School,Engineering
-112900,11.0,35,Bachelor,Engineering
-74400,12.4,35,High School,Finance
-79700,3.6,22,PhD,Operations
-135500,16.3,37,Master,Finance
-114300,11.9,35,Master,Research
-129400,23.1,44,Master,Marketing
-153800,36.8,56,Master,Marketing
-134900,28.8,49,Bachelor,Research
-152300,13.1,35,PhD,Engineering
-95300,2.7,26,Bachelor,Research
-184800,40.0,63,Master,Engineering
-137000,16.8,38,PhD,Research
-115800,17.8,38,Bachelor,Engineering
-110600,16.3,37,High School,Research
-104500,19.1,39,Bachelor,Finance
-114600,12.9,36,Bachelor,Research
-124100,12.6,32,Master,Engineering
-118200,10.4,32,Master,Finance
-115200,19.2,37,High School,Research
-83900,8.6,32,Bachelor,Finance
-110400,11.5,30,Bachelor,Finance
-96300,17.4,39,Bachelor,Operations
-73800,11.7,35,High School,Marketing
-135600,30.0,53,Bachelor,Finance
-106000,0.0,22,PhD,Finance
-138400,,48,Bachelor,Research
-146000,29.0,50,Bachelor,Engineering
-91400,0.0,22,Master,Marketing
-98500,12.0,34,Bachelor,Research
-144600,16.3,34,PhD,Research
-122000,4.5,23,PhD,Marketing
-91500,8.9,30,Bachelor,Finance
-81800,4.1,26,Bachelor,Engineering
-167000,33.2,55,Bachelor,Engineering
-129400,26.2,47,Bachelor,Finance
-124800,26.0,50,High School,Marketing
-132100,22.5,45,Bachelor,Finance
-75300,0.7,26,Bachelor,Engineering
-113300,10.8,32,High School,Research
-127700,21.3,42,Bachelor,Research
-105500,2.0,25,PhD,Operations
-137300,26.1,45,Bachelor,Finance
-82900,10.5,35,High School,Marketing
-91900,9.1,34,Bachelor,Operations
-150400,23.4,45,PhD,Operations
-124300,22.1,42,Bachelor,Engineering
-139100,15.4,34,Master,Research
-154500,26.1,49,Master,Research
-117400,7.2,27,Bachelor,Research
-125800,21.9,44,Master,Operations
-118400,20.7,43,Bachelor,Finance
-110800,13.8,34,Master,Marketing
-134600,20.3,41,Master,Research
-73300,0.0,25,Bachelor,Research
-142000,28.0,47,High School,Engineering
-128400,,36,Master,Engineering
-71500,8.7,32,Bachelor,Marketing
-125100,26.8,48,Bachelor,Operations
-100300,9.0,30,High School,Research
-88100,1.5,23,Bachelor,Engineering
-97000,0.0,22,Master,Finance
-88900,20.7,44,High School,Marketing
-76200,2.9,25,Bachelor,Research
-180200,35.3,55,Bachelor,Research
-97700,1.1,22,Master,Research
-130900,31.3,54,High School,Finance
-134800,19.5,40,Master,Marketing
-105300,9.3,37,Bachelor,Engineering
-149600,12.3,32,PhD,Engineering
-124700,15.5,41,High School,Research
-84500,14.3,37,Bachelor,Operations
-135900,24.8,49,High School,Research
-155100,14.4,39,PhD,Research
-136700,19.3,39,Master,Finance
-96400,11.1,34,Bachelor,Operations
-140300,15.7,37,Master,Research
-148200,18.9,41,Master,Research
-90100,1.0,22,Bachelor,Engineering
-62000,2.2,24,Bachelor,Marketing
-119400,20.4,45,Bachelor,Engineering
-104200,19.0,39,High School,Research
-123500,13.0,36,PhD,Finance
-165500,,38,PhD,Engineering
-105500,18.1,41,Master,Operations
-101200,13.0,32,Bachelor,Finance
-80800,9.7,30,Bachelor,Marketing
-135900,16.3,39,Master,Engineering
-114100,5.3,28,PhD,Operations
-164300,19.4,42,PhD,Finance
-76800,4.2,22,Master,Operations
-150800,26.8,48,Master,Finance
-120700,20.9,42,High School,Research
-104000,20.1,40,High School,Finance
-185700,25.5,47,PhD,Finance
-162000,31.5,54,Bachelor,Research
-114100,25.6,48,High School,Marketing
-70000,0.0,22,High School,Engineering
-111500,2.9,25,Master,Engineering
-68800,10.5,31,High School,Operations
-85000,16.1,38,High School,Finance
-113600,22.5,43,Bachelor,Operations
-106900,7.8,30,Master,Engineering
-130500,17.2,39,Master,Engineering
-92900,4.0,30,Bachelor,Engineering
-113100,10.8,31,Master,Marketing
-76300,1.7,23,Bachelor,Finance
-82000,8.0,28,Bachelor,Marketing
-91300,0.0,24,Master,Marketing
-124600,10.2,28,Master,Research
-161100,25.7,48,Master,Marketing
-112800,8.2,28,Master,Finance
-135900,39.9,64,Bachelor,Operations
-103700,21.2,42,High School,Marketing
-111200,14.9,39,Bachelor,Finance
-107500,5.8,29,Bachelor,Research
-152400,26.8,45,Bachelor,Research
-137800,9.6,32,PhD,Engineering
-112700,17.4,39,Bachelor,Research
-204100,40.0,63,PhD,Finance
-124700,16.0,37,Master,Engineering
-136300,,49,Master,Marketing
-108200,8.7,30,Bachelor,Research
-134500,19.8,37,Bachelor,Finance
-142500,32.9,55,Bachelor,Marketing
-83800,9.4,31,Bachelor,Finance
-184600,36.1,56,Master,Engineering
-149200,25.2,45,Bachelor,Engineering
-88300,12.4,32,High School,Engineering
-148700,23.3,44,Master,Engineering
-118600,22.7,47,High School,Engineering
-169700,25.3,44,PhD,Engineering
-115800,0.0,22,PhD,Finance
-135600,8.6,30,PhD,Engineering
-91400,,35,Bachelor,Marketing
-95800,14.9,37,High School,Research
-160500,22.7,44,PhD,Finance
-104700,17.6,39,Bachelor,Operations
-119400,2.8,24,PhD,Engineering
-184800,22.2,41,PhD,Engineering
-145400,22.9,44,Master,Engineering
-129200,20.5,43,Bachelor,Engineering
-153400,27.9,48,Bachelor,Engineering
-144600,26.4,46,Master,Engineering
-104200,17.5,42,Bachelor,Engineering
-89100,16.2,37,High School,Engineering
-86700,1.4,22,Bachelor,Finance
-157600,19.4,42,PhD,Engineering
-148900,20.8,40,Master,Marketing
-109400,17.7,40,Bachelor,Finance
-51600,3.3,25,High School,Operations
-103200,4.7,27,Bachelor,Engineering
-174500,26.0,48,PhD,Operations
-107300,12.8,37,High School,Finance
-134700,19.1,44,Bachelor,Engineering
-153300,19.2,38,Master,Research
-137700,14.3,38,Master,Research
-156200,23.0,47,Master,Engineering
-102700,5.7,32,Master,Engineering
-83900,14.7,38,Bachelor,Operations
-76100,8.4,33,Bachelor,Operations
-126800,14.3,33,Master,Engineering
-123500,14.0,34,Master,Engineering
-122100,,40,Master,Marketing
-155800,15.5,33,PhD,Finance
-144800,,50,Bachelor,Finance
-88700,6.4,29,Bachelor,Marketing
-99300,9.0,36,Master,Finance
-107700,15.6,33,Master,Operations
-152800,27.2,52,Master,Engineering
-110100,13.7,39,Master,Engineering
-160500,28.0,48,PhD,Operations
-95100,5.9,23,Bachelor,Research
-135500,20.8,40,Bachelor,Finance
-123900,25.1,46,High School,Finance
-110100,17.2,38,Bachelor,Engineering
-129200,27.7,48,High School,Marketing
-110600,11.5,32,Bachelor,Finance
-156700,,52,Bachelor,Engineering
-167600,38.2,60,Bachelor,Engineering
-79900,11.9,34,Bachelor,Marketing
-83500,9.5,33,High School,Engineering
-126400,29.4,52,High School,Marketing
-177200,27.6,53,Master,Engineering
-97400,9.8,32,Bachelor,Marketing
-81200,9.0,33,High School,Engineering
-97800,10.8,35,Bachelor,Research
-95000,2.4,24,Master,Finance
-61200,8.8,28,Bachelor,Operations
-91200,6.8,27,Master,Operations
-68400,4.9,30,High School,Finance
-91000,13.0,37,High School,Engineering
-105400,19.9,40,Bachelor,Finance
-146200,29.0,53,Bachelor,Finance
-80600,5.6,28,Master,Operations
-128100,26.1,47,Master,Marketing
-116800,11.1,35,PhD,Engineering
-96200,15.2,37,Bachelor,Marketing
-122300,19.3,44,Bachelor,Marketing
-109700,2.8,26,Master,Finance
-114900,19.6,41,Bachelor,Finance
-87700,13.8,39,Bachelor,Marketing
-122400,20.9,42,High School,Research
-92200,18.0,40,High School,Finance
-214700,40.0,62,PhD,Engineering
-123500,9.4,31,Master,Engineering
-135500,12.7,32,Master,Engineering
-99400,,31,Bachelor,Engineering
-84000,9.1,32,High School,Engineering
-78200,9.2,31,High School,Engineering
-120000,28.1,49,Bachelor,Marketing
-148200,30.1,52,Bachelor,Engineering
-125500,10.1,32,Master,Research
-115700,5.6,29,Master,Engineering
-109700,,42,Bachelor,Finance
-128700,7.2,32,PhD,Marketing
-156800,25.5,44,Master,Research
-115000,15.5,40,Bachelor,Engineering
-53300,0.0,22,Bachelor,Marketing
-131200,29.6,53,Bachelor,Research
-173500,34.8,55,Bachelor,Research
-82800,8.4,31,Bachelor,Operations
-126300,14.5,34,Master,Engineering
-104700,16.7,40,High School,Engineering
-93700,19.6,41,High School,Operations
-102700,20.3,44,High School,Research
-149200,40.0,58,High School,Finance
-123000,11.6,36,Master,Finance
-103400,8.6,30,Master,Engineering
-66600,,24,Bachelor,Operations
-72900,8.8,30,High School,Engineering
-99200,14.6,37,Bachelor,Marketing
-138200,32.7,55,Bachelor,Marketing
-67700,,32,High School,Finance
-131000,17.7,40,Bachelor,Engineering
-111900,16.9,37,Bachelor,Engineering
-140100,31.4,49,Bachelor,Finance
-173600,39.9,63,Master,Marketing
-85900,7.3,32,High School,Finance
-94800,,33,Bachelor,Engineering
-163400,31.2,48,Master,Finance
+salary,salary_ab,years_experience,age,education_level,department,region,training_sessions,variant
+101200,101200,11.4,33,Bachelor,Finance,East,2,control
+199200,199700,37.5,60,PhD,Research,East,5,treatment
+101500,101500,3.4,25,Master,Finance,North,1,control
+93300,101400,3.5,24,Bachelor,Engineering,South,2,treatment
+141700,141700,33.7,54,High School,Engineering,South,3,control
+91300,103400,11.6,30,High School,Finance,Central,1,treatment
+75800,75800,,28,High School,Engineering,South,3,control
+177700,185900,38.1,61,Master,Finance,West,1,treatment
+122700,122700,21.8,47,Bachelor,Research,South,2,control
+126300,124400,11.9,32,Master,Finance,Central,6,treatment
+94400,94400,17.3,40,High School,Marketing,South,2,control
+200200,205800,35.4,57,PhD,Finance,West,6,treatment
+139800,139800,20.8,44,Master,Marketing,North,5,control
+146000,158600,27.3,50,Bachelor,Finance,Central,5,treatment
+151500,151500,26.4,46,Bachelor,Research,North,3,control
+103400,124500,26.4,47,Bachelor,Marketing,North,5,treatment
+130700,130700,15.8,38,Bachelor,Research,North,6,control
+124700,126600,17.5,38,Bachelor,Research,East,0,treatment
+127900,127900,19.6,40,Bachelor,Engineering,East,4,control
+134200,144600,22.2,45,Bachelor,Engineering,North,2,treatment
+109200,109200,10.1,35,Bachelor,Engineering,Central,1,control
+110600,123200,15.2,39,High School,Engineering,West,3,treatment
+106000,106000,9.3,34,Bachelor,Engineering,West,2,control
+106600,103600,19.3,39,Bachelor,Operations,South,4,treatment
+93800,93800,5.7,25,Bachelor,Engineering,Central,2,control
+141800,159600,40.0,64,Master,Marketing,East,7,treatment
+89000,89000,4.0,30,Bachelor,Research,North,3,control
+103400,98400,14.1,34,Bachelor,Engineering,South,2,treatment
+94300,94300,11.4,29,Bachelor,Operations,West,2,control
+109700,119700,24.2,44,High School,Marketing,East,3,treatment
+97200,97200,9.7,36,Bachelor,Engineering,East,0,control
+61600,67500,9.5,28,High School,Operations,North,4,treatment
+107500,107500,22.1,44,High School,Finance,West,6,control
+170300,174200,22.5,45,PhD,Research,Central,6,treatment
+119200,119200,15.9,37,PhD,Operations,East,4,control
+73600,97500,6.9,31,Master,Operations,North,2,treatment
+149100,149100,,59,Bachelor,Marketing,Central,2,control
+127000,128100,22.2,41,High School,Engineering,West,2,treatment
+77200,77200,4.2,25,Master,Operations,East,2,control
+131000,132000,30.1,52,Bachelor,Operations,Central,7,treatment
+91900,91900,7.2,29,High School,Research,Central,2,control
+147100,161300,40.0,65,Bachelor,Marketing,Central,5,treatment
+83500,83500,15.7,38,High School,Marketing,East,1,control
+142500,152100,22.7,48,PhD,Operations,East,9,treatment
+79300,79300,2.0,22,Bachelor,Marketing,South,4,control
+112100,125900,0.0,25,Master,Research,West,4,treatment
+146700,146700,30.7,51,Bachelor,Research,North,6,control
+113900,118300,,41,Bachelor,Marketing,Central,4,treatment
+158200,158200,38.6,58,Bachelor,Operations,South,1,control
+112100,118100,20.2,42,Bachelor,Operations,North,5,treatment
+161900,161900,18.8,39,PhD,Engineering,South,7,control
+188200,206900,32.7,55,Master,Research,East,6,treatment
+158500,158500,23.6,48,PhD,Finance,Central,5,control
+158300,155100,17.1,36,PhD,Research,North,4,treatment
+63600,63600,4.8,27,Bachelor,Marketing,North,0,control
+127000,129700,0.0,22,PhD,Research,North,0,treatment
+65000,65000,10.1,33,High School,Marketing,North,4,control
+83900,93800,3.1,26,Bachelor,Engineering,North,5,treatment
+169600,169600,40.0,63,High School,Research,South,8,control
+117200,119100,13.7,31,Bachelor,Engineering,Central,3,treatment
+75800,75800,10.0,31,Bachelor,Marketing,East,2,control
+92500,91400,0.4,22,Bachelor,Research,East,2,treatment
+145100,145100,17.9,35,Master,Research,East,2,control
+88700,97100,11.0,31,Bachelor,Finance,East,4,treatment
+140500,140500,33.5,55,Bachelor,Finance,South,3,control
+98300,112500,16.0,39,Bachelor,Marketing,West,0,treatment
+91100,91100,15.6,37,High School,Marketing,Central,0,control
+117200,119600,13.9,36,Master,Marketing,North,4,treatment
+100900,100900,23.2,45,High School,Operations,West,6,control
+127100,129300,13.6,33,PhD,Operations,East,5,treatment
+126800,126800,20.9,44,Master,Operations,West,4,control
+127500,125800,33.0,54,Bachelor,Operations,Central,3,treatment
+131700,131700,21.9,42,High School,Engineering,North,7,control
+131100,132200,11.7,35,Master,Finance,North,2,treatment
+108400,108400,4.4,28,Master,Engineering,Central,0,control
+120300,132500,12.7,35,Master,Finance,Central,4,treatment
+120500,120500,20.1,43,Master,Marketing,East,2,control
+78300,82400,2.3,22,High School,Research,North,3,treatment
+106600,106600,22.0,46,Bachelor,Marketing,West,2,control
+87400,84500,18.1,40,High School,Engineering,South,3,treatment
+115400,115400,19.1,36,Master,Engineering,South,2,control
+88300,93900,9.8,31,Master,Operations,Central,2,treatment
+102700,102700,12.2,33,Bachelor,Finance,East,1,control
+122900,134800,23.3,43,High School,Engineering,South,2,treatment
+105100,105100,13.1,36,Bachelor,Engineering,North,1,control
+76000,75000,7.8,32,Bachelor,Operations,Central,4,treatment
+140500,140500,20.4,42,Master,Engineering,West,4,control
+140600,133500,21.5,43,Master,Research,Central,3,treatment
+93500,93500,0.0,25,PhD,Operations,West,3,control
+137600,158600,21.8,43,Bachelor,Engineering,Central,2,treatment
+151400,151400,40.0,63,High School,Engineering,Central,3,control
+133100,125600,18.2,42,Master,Research,Central,4,treatment
+68500,68500,0.9,22,Master,Marketing,West,3,control
+87700,88300,18.8,39,Bachelor,Marketing,West,2,treatment
+70600,70600,1.2,22,Master,Operations,Central,1,control
+184400,189800,40.0,65,Bachelor,Research,South,2,treatment
+173600,173600,37.5,60,Bachelor,Research,East,2,control
+70600,71900,6.7,31,Bachelor,Operations,East,0,treatment
+47200,47200,0.0,22,High School,Marketing,East,0,control
+73500,76400,5.8,29,High School,Engineering,West,1,treatment
+57600,57600,13.8,36,High School,Operations,West,1,control
+100300,108400,2.2,22,Master,Finance,South,4,treatment
+99400,99400,12.4,37,Bachelor,Marketing,East,2,control
+109800,94200,14.3,36,Bachelor,Research,East,1,treatment
+150400,150400,14.9,39,PhD,Engineering,Central,5,control
+109500,102900,16.5,40,Bachelor,Finance,West,4,treatment
+98200,98200,7.1,28,Bachelor,Engineering,East,2,control
+114200,118100,4.6,29,Master,Finance,South,2,treatment
+130400,130400,17.5,38,Bachelor,Engineering,South,5,control
+75700,76000,6.3,31,High School,Engineering,East,2,treatment
+146000,146000,,47,Bachelor,Engineering,West,1,control
+100200,104700,12.9,38,High School,Finance,South,5,treatment
+176400,176400,32.8,56,PhD,Operations,Central,2,control
+154700,160000,27.8,46,Master,Finance,South,5,treatment
+175000,175000,30.4,49,Master,Research,North,2,control
+108600,95200,16.2,39,Master,Marketing,North,2,treatment
+113700,113700,17.8,39,Master,Marketing,West,5,control
+157400,171100,35.4,55,Bachelor,Research,East,7,treatment
+150900,150900,13.4,34,PhD,Engineering,West,5,control
+130000,129500,20.5,43,Bachelor,Research,West,2,treatment
+114200,114200,11.5,35,Master,Engineering,West,1,control
+153800,150400,,35,PhD,Research,West,6,treatment
+97300,97300,6.3,26,Bachelor,Engineering,Central,1,control
+112600,117800,11.4,30,High School,Research,Central,1,treatment
+87300,87300,2.6,28,Bachelor,Finance,South,2,control
+105800,110200,18.5,43,Bachelor,Research,North,1,treatment
+164100,164100,28.3,48,Master,Engineering,West,6,control
+129400,142500,11.9,37,Master,Finance,South,2,treatment
+105200,105200,20.5,40,High School,Research,North,1,control
+109600,115300,13.6,36,Bachelor,Finance,East,2,treatment
+84300,84300,6.0,29,Bachelor,Finance,Central,1,control
+124900,137700,24.4,46,Bachelor,Operations,North,3,treatment
+96000,96000,19.3,44,High School,Marketing,East,5,control
+67900,63900,1.6,22,Bachelor,Finance,North,3,treatment
+147600,147600,16.4,35,PhD,Finance,Central,5,control
+101600,106200,8.7,29,Bachelor,Research,Central,6,treatment
+104500,104500,11.5,34,Bachelor,Engineering,South,3,control
+100200,94800,5.9,31,Master,Marketing,West,2,treatment
+103200,103200,12.0,37,Bachelor,Research,North,1,control
+151300,155600,9.3,34,PhD,Research,North,1,treatment
+124100,124100,12.0,34,PhD,Marketing,East,3,control
+139300,141900,27.2,49,Bachelor,Finance,Central,3,treatment
+133100,133100,22.7,43,Bachelor,Engineering,North,3,control
+88400,90600,4.4,30,Bachelor,Engineering,Central,2,treatment
+102100,102100,12.6,32,Bachelor,Finance,North,3,control
+110500,112800,21.4,42,High School,Marketing,South,2,treatment
+125900,125900,19.3,42,Bachelor,Finance,West,5,control
+90600,100000,6.6,31,Bachelor,Engineering,North,5,treatment
+119400,119400,15.5,35,High School,Research,Central,1,control
+164600,155200,33.4,56,Bachelor,Research,South,5,treatment
+121200,121200,10.0,32,PhD,Operations,North,3,control
+150400,146700,35.8,57,Bachelor,Finance,East,3,treatment
+102000,102000,25.2,49,High School,Marketing,West,2,control
+127600,130800,32.4,55,Bachelor,Operations,North,8,treatment
+120500,120500,10.7,31,PhD,Operations,South,5,control
+120900,115000,15.5,36,Bachelor,Engineering,East,5,treatment
+131300,131300,12.5,33,Master,Research,South,2,control
+171600,175500,,49,Master,Research,South,2,treatment
+96800,96800,9.5,32,Bachelor,Research,East,4,control
+126300,129400,22.2,45,Master,Operations,South,3,treatment
+115400,115400,22.9,44,Bachelor,Finance,East,2,control
+105400,97700,15.7,37,Master,Marketing,North,4,treatment
+177300,177300,28.3,50,Master,Research,East,6,control
+130400,122300,21.9,39,Bachelor,Research,East,3,treatment
+112900,112900,23.4,46,High School,Engineering,West,1,control
+99300,81800,10.2,33,Master,Engineering,East,2,treatment
+66400,66400,,30,Bachelor,Marketing,East,1,control
+101900,95600,19.9,45,Bachelor,Operations,North,4,treatment
+98000,98000,17.6,42,High School,Research,West,5,control
+115500,119100,16.6,40,Bachelor,Engineering,Central,3,treatment
+134500,134500,14.6,34,Master,Finance,North,7,control
+114300,119000,,53,High School,Marketing,North,8,treatment
+84100,84100,4.4,26,Bachelor,Research,Central,3,control
+81000,86100,3.8,26,Bachelor,Research,East,5,treatment
+149400,149400,25.7,47,Master,Research,South,2,control
+127100,124400,26.8,46,High School,Finance,West,4,treatment
+112400,112400,15.0,41,Master,Marketing,South,2,control
+123600,127000,,35,Bachelor,Engineering,Central,1,treatment
+172600,172600,16.0,43,PhD,Engineering,North,2,control
+131000,137700,33.1,55,High School,Research,North,7,treatment
+155400,155400,40.0,63,Bachelor,Operations,West,3,control
+61300,54700,1.4,22,High School,Research,North,3,treatment
+155200,155200,11.7,33,PhD,Research,North,1,control
+121600,126100,15.0,33,Master,Finance,West,5,treatment
+129700,129700,30.6,54,Bachelor,Operations,West,2,control
+88600,97400,0.9,22,Master,Research,Central,0,treatment
+147400,147400,22.2,43,Master,Research,North,4,control
+107600,107200,12.0,35,Bachelor,Engineering,North,2,treatment
+146800,146800,31.1,54,Bachelor,Marketing,Central,4,control
+142600,154600,29.9,53,Bachelor,Engineering,East,2,treatment
+109100,109100,19.2,41,High School,Research,East,5,control
+121100,120900,1.1,22,PhD,Finance,East,3,treatment
+132700,132700,10.2,32,PhD,Engineering,Central,7,control
+112000,108600,12.4,33,Master,Operations,North,2,treatment
+71900,71900,0.0,24,Bachelor,Finance,Central,3,control
+126600,134600,26.6,49,Bachelor,Marketing,Central,4,treatment
+97300,97300,,23,Master,Engineering,East,2,control
+173900,193700,35.6,57,PhD,Operations,South,10,treatment
+198900,198900,35.6,57,PhD,Finance,North,9,control
+93400,97600,11.8,34,Master,Operations,East,3,treatment
+131500,131500,20.0,41,Master,Finance,South,4,control
+113800,122400,17.0,37,High School,Research,South,6,treatment
+120400,120400,24.9,47,High School,Finance,West,3,control
+171500,170900,25.9,50,PhD,Finance,North,4,treatment
+106200,106200,14.8,40,Bachelor,Research,South,0,control
+85200,78800,20.1,42,High School,Marketing,East,1,treatment
+89300,89300,9.5,31,High School,Engineering,West,0,control
+144000,148800,18.1,42,Master,Engineering,North,3,treatment
+76400,76400,18.5,39,High School,Operations,Central,1,control
+62700,68800,5.1,28,High School,Finance,East,2,treatment
+85300,85300,11.7,37,Bachelor,Operations,South,1,control
+129800,130400,14.5,34,Master,Engineering,South,3,treatment
+106500,106500,11.3,31,Master,Engineering,East,4,control
+79500,88000,0.0,26,Bachelor,Engineering,South,3,treatment
+106400,106400,14.9,38,Master,Marketing,West,7,control
+103100,101400,6.8,30,Bachelor,Finance,North,1,treatment
+96600,96600,14.3,33,Bachelor,Marketing,West,2,control
+141700,138000,25.8,48,Master,Marketing,South,4,treatment
+147600,147600,19.0,44,Master,Research,Central,3,control
+83800,95800,7.8,28,Master,Marketing,North,3,treatment
+145100,145100,16.5,41,Master,Finance,North,1,control
+81000,93000,16.5,39,Bachelor,Operations,East,1,treatment
+128800,128800,31.5,55,High School,Marketing,East,9,control
+144500,142900,27.9,51,Bachelor,Finance,Central,3,treatment
+82300,82300,1.9,22,Bachelor,Research,North,0,control
+152800,170100,27.0,46,Bachelor,Research,Central,3,treatment
+174300,174300,25.5,50,PhD,Engineering,East,8,control
+129400,130600,22.3,43,Bachelor,Research,East,1,treatment
+139400,139400,10.5,34,PhD,Finance,North,5,control
+177600,181800,38.6,62,Master,Engineering,West,6,treatment
+129200,129200,23.0,44,Master,Marketing,South,3,control
+155600,158400,32.9,57,Bachelor,Research,East,2,treatment
+140700,140700,29.9,51,Bachelor,Finance,East,4,control
+115500,123200,21.5,42,Bachelor,Marketing,West,0,treatment
+88500,88500,9.1,32,Bachelor,Finance,West,1,control
+134700,140400,,37,Master,Engineering,Central,2,treatment
+98700,98700,10.5,35,Bachelor,Engineering,Central,3,control
+90700,96300,5.7,25,High School,Engineering,South,2,treatment
+140500,140500,18.1,44,Master,Engineering,South,3,control
+153300,148600,36.4,53,High School,Engineering,North,4,treatment
+151400,151400,12.2,35,PhD,Engineering,Central,4,control
+187900,177900,34.7,59,PhD,Finance,East,7,treatment
+123700,123700,0.0,22,PhD,Engineering,Central,2,control
+120500,133100,23.9,48,Bachelor,Marketing,East,3,treatment
+132700,132700,32.8,54,High School,Research,West,4,control
+134800,133900,15.7,35,PhD,Finance,Central,6,treatment
+79600,79600,12.0,36,Bachelor,Operations,West,1,control
+169400,172500,27.2,48,PhD,Engineering,South,13,treatment
+156800,156800,17.9,43,PhD,Engineering,South,3,control
+89900,96000,2.1,22,Master,Engineering,North,4,treatment
+95800,95800,,29,Bachelor,Engineering,Central,3,control
+132000,148500,17.2,37,Bachelor,Engineering,West,3,treatment
+97900,97900,1.8,24,Master,Engineering,East,4,control
+99500,104300,10.1,33,Bachelor,Engineering,South,2,treatment
+76100,76100,3.6,24,High School,Engineering,South,3,control
+88300,88600,9.4,34,Bachelor,Finance,East,0,treatment
+144000,144000,8.5,34,PhD,Engineering,West,2,control
+126100,125400,19.0,41,Master,Marketing,West,2,treatment
+106400,106400,14.2,37,Bachelor,Finance,Central,6,control
+96400,99600,22.1,43,High School,Operations,Central,0,treatment
+147300,147300,21.2,41,Bachelor,Engineering,North,7,control
+167500,163700,,48,PhD,Operations,South,5,treatment
+140200,140200,26.0,46,High School,Finance,Central,3,control
+139400,143100,23.6,45,Bachelor,Engineering,West,2,treatment
+180800,180800,40.0,65,Master,Research,East,10,control
+140800,143900,18.8,41,Master,Research,West,4,treatment
+174700,174700,40.0,63,Master,Engineering,South,8,control
+147500,164100,20.3,42,Master,Engineering,West,2,treatment
+100400,100400,15.7,37,Bachelor,Operations,North,2,control
+76100,78900,11.7,34,Bachelor,Operations,South,1,treatment
+166300,166300,32.6,53,Master,Engineering,East,3,control
+168800,156900,30.6,54,Master,Engineering,North,4,treatment
+115600,115600,21.0,43,Master,Marketing,South,4,control
+169600,194500,29.6,49,PhD,Finance,East,5,treatment
+85800,85800,1.1,25,Bachelor,Finance,North,2,control
+61000,72200,0.0,22,Bachelor,Marketing,North,5,treatment
+151900,151900,28.7,50,Master,Finance,South,3,control
+89200,109400,13.5,36,Master,Operations,Central,3,treatment
+161700,161700,25.0,45,Master,Engineering,North,0,control
+106300,100500,7.7,30,Master,Engineering,North,0,treatment
+184700,184700,30.8,54,PhD,Operations,East,5,control
+89700,91400,0.0,22,Bachelor,Research,West,4,treatment
+74800,74800,4.2,24,Bachelor,Finance,South,4,control
+126400,135300,31.2,52,High School,Finance,South,1,treatment
+93500,93500,0.0,22,Bachelor,Engineering,Central,4,control
+91800,99600,19.4,41,High School,Marketing,Central,2,treatment
+102200,102200,14.5,36,Bachelor,Finance,South,1,control
+97400,103400,8.0,30,Bachelor,Engineering,Central,2,treatment
+104100,104100,12.8,36,Bachelor,Engineering,East,3,control
+84700,70600,9.4,29,Bachelor,Marketing,South,0,treatment
+143700,143700,33.5,53,High School,Engineering,Central,1,control
+124900,114700,29.6,56,High School,Marketing,South,3,treatment
+108300,108300,7.4,31,Master,Engineering,West,4,control
+94500,110100,17.7,40,Bachelor,Marketing,North,2,treatment
+70200,70200,3.9,24,High School,Engineering,South,0,control
+141400,158500,26.1,48,Bachelor,Research,North,1,treatment
+146300,146300,24.6,48,Master,Finance,Central,7,control
+96300,98900,14.4,35,Bachelor,Operations,North,4,treatment
+114700,114700,15.6,38,Master,Operations,South,2,control
+104300,118900,14.8,37,High School,Finance,West,2,treatment
+56700,56700,0.0,22,High School,Engineering,Central,0,control
+152500,147800,,53,Bachelor,Finance,South,0,treatment
+96300,96300,7.4,30,Bachelor,Finance,Central,1,control
+88500,85600,9.4,30,Master,Operations,East,3,treatment
+107500,107500,13.9,36,Master,Marketing,North,2,control
+155200,149900,22.9,47,PhD,Engineering,East,3,treatment
+91900,91900,9.9,32,Bachelor,Marketing,South,1,control
+58100,54800,0.0,22,Bachelor,Marketing,West,3,treatment
+112300,112300,7.1,29,Master,Finance,Central,1,control
+125900,135200,21.7,42,Bachelor,Finance,North,4,treatment
+142100,142100,34.9,59,Bachelor,Marketing,Central,0,control
+62500,59100,3.7,25,High School,Research,South,1,treatment
+48400,48400,1.3,25,High School,Finance,Central,3,control
+93600,115000,0.4,22,PhD,Engineering,North,3,treatment
+93000,93000,1.7,22,Master,Engineering,South,3,control
+171400,178600,23.7,50,Master,Engineering,Central,2,treatment
+133100,133100,27.8,52,Bachelor,Engineering,West,5,control
+79400,91600,16.3,39,High School,Engineering,South,4,treatment
+100500,100500,11.6,33,High School,Engineering,South,3,control
+159800,167200,32.7,55,Bachelor,Marketing,West,3,treatment
+121200,121200,16.9,39,Bachelor,Engineering,East,2,control
+172800,186000,30.1,48,Master,Research,North,3,treatment
+109500,109500,7.6,32,Master,Engineering,East,3,control
+99800,96400,18.3,38,Bachelor,Finance,Central,0,treatment
+90500,90500,2.3,25,PhD,Marketing,West,3,control
+150600,165700,23.1,44,Master,Research,East,1,treatment
+124500,124500,21.3,39,Bachelor,Engineering,South,0,control
+79100,83700,,29,Bachelor,Marketing,Central,4,treatment
+107900,107900,7.7,29,Bachelor,Research,Central,0,control
+161200,174400,35.2,54,Bachelor,Research,East,2,treatment
+152900,152900,37.2,57,Bachelor,Operations,East,5,control
+116200,108200,11.4,35,Master,Engineering,West,5,treatment
+113200,113200,,38,High School,Engineering,North,2,control
+82600,87500,16.6,42,High School,Operations,East,3,treatment
+102200,102200,15.9,39,High School,Research,East,1,control
+60100,64800,0.6,22,High School,Finance,South,4,treatment
+130500,130500,18.8,42,Master,Finance,Central,3,control
+96200,94700,0.5,22,Master,Engineering,North,0,treatment
+82000,82000,8.0,30,Bachelor,Operations,South,5,control
+116300,122300,22.1,43,High School,Engineering,West,5,treatment
+105200,105200,,43,Bachelor,Marketing,West,1,control
+62100,77900,5.1,29,Bachelor,Marketing,East,1,treatment
+96800,96800,14.0,33,High School,Finance,East,0,control
+102700,100600,9.0,32,Bachelor,Engineering,West,3,treatment
+104100,104100,15.3,36,Bachelor,Engineering,East,1,control
+122500,133700,17.9,37,Bachelor,Finance,North,1,treatment
+118700,118700,22.3,44,Master,Marketing,East,3,control
+87200,81700,8.3,32,High School,Finance,Central,5,treatment
+128800,128800,18.6,41,Bachelor,Engineering,East,3,control
+147000,167400,23.0,43,Master,Finance,South,2,treatment
