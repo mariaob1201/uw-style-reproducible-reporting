@@ -1,0 +1,47 @@
+project:
+  title: "Employee Compensation Analysis"
+  description: "Exploratory analysis of salary determinants across departments and education levels"
+  author: "UW-Madison Research Team"
+
+data:
+  path: "data/sample_employees.csv"
+  delimiter: ","
+
+# Each variable needs:
+#   name:  column name in the CSV
+#   type:  continuous | categorical | binary | ordinal
+#   role:  dependent | independent | id | excluded
+#   label: human-readable label for plots (optional, defaults to name)
+variables:
+  - name: "salary"
+    type: "continuous"
+    role: "dependent"
+    label: "Annual Salary ($)"
+
+  - name: "years_experience"
+    type: "continuous"
+    role: "independent"
+    label: "Years of Experience"
+
+  - name: "age"
+    type: "continuous"
+    role: "independent"
+    label: "Age (years)"
+
+  - name: "education_level"
+    type: "categorical"
+    role: "independent"
+    label: "Education Level"
+
+  - name: "department"
+    type: "categorical"
+    role: "independent"
+    label: "Department"
+
+# Model to fit after EDA.
+# Supported types: linear_regression, logistic_regression
+# The model uses all 'independent' variables to predict the 'dependent' variable.
+# Categorical variables are automatically one-hot encoded.
+model:
+  type: "linear_regression"
+  description: "OLS regression predicting annual salary from years of experience, age, education, and department"

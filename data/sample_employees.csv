@@ -1,0 +1,351 @@
+salary,years_experience,age,education_level,department
+89700,10.4,31,Bachelor,Finance
+182000,19.7,38,PhD,Research
+122800,8.2,29,Master,Finance
+100100,11.3,34,Bachelor,Engineering
+134400,27.2,48,High School,Engineering
+101900,12.2,32,High School,Finance
+122000,25.6,46,High School,Engineering
+98200,5.0,26,Master,Finance
+132200,23.1,43,Bachelor,Research
+156400,32.3,52,Master,Finance
+46900,2.8,22,High School,Marketing
+121300,9.3,30,PhD,Finance
+126000,20.7,43,Master,Marketing
+97000,13.3,35,Bachelor,Finance
+135500,21.4,41,Bachelor,Research
+63800,7.4,31,Bachelor,Marketing
+125100,16.7,38,Bachelor,Research
+121200,13.2,36,Bachelor,Research
+125100,27.1,49,Bachelor,Engineering
+130800,20.6,40,Bachelor,Engineering
+135600,19.4,41,Bachelor,Engineering
+79800,11.1,33,High School,Engineering
+113000,8.3,33,Bachelor,Engineering
+89800,12.5,33,Bachelor,Operations
+120400,20.3,41,Bachelor,Engineering
+112200,15.3,33,Master,Marketing
+128800,17.4,40,Bachelor,Research
+166000,36.4,58,Bachelor,Engineering
+119600,24.5,46,Bachelor,Operations
+74200,15.2,34,High School,Marketing
+146200,,50,Bachelor,Engineering
+57100,11.6,33,High School,Operations
+59900,1.2,22,High School,Finance
+124800,5.4,27,PhD,Research
+87400,0.0,22,PhD,Operations
+112900,12.4,34,Master,Operations
+113300,,38,Bachelor,Marketing
+141200,29.9,54,High School,Engineering
+108500,19.3,41,Master,Operations
+81000,11.6,35,Bachelor,Operations
+142300,26.4,46,High School,Research
+61300,0.0,22,Bachelor,Marketing
+107400,16.9,40,High School,Marketing
+154700,23.8,45,PhD,Operations
+71600,4.1,23,Bachelor,Marketing
+159800,26.9,49,Master,Research
+126200,17.9,41,Bachelor,Research
+94100,14.8,33,Bachelor,Marketing
+108200,19.1,44,Bachelor,Operations
+145300,33.6,60,Bachelor,Operations
+151900,17.9,39,PhD,Engineering
+126800,17.0,40,Master,Research
+115100,9.0,33,PhD,Finance
+144700,8.4,29,PhD,Research
+108900,24.5,46,Bachelor,Marketing
+114800,5.9,29,PhD,Research
+81700,13.4,38,High School,Marketing
+130900,12.7,33,Bachelor,Engineering
+119100,21.3,42,High School,Research
+130700,18.8,41,Bachelor,Engineering
+132000,29.7,48,Bachelor,Marketing
+100100,7.9,32,Bachelor,Research
+130000,9.9,35,Master,Research
+80400,4.6,28,Bachelor,Finance
+100600,10.9,33,Bachelor,Finance
+109700,19.5,41,Bachelor,Marketing
+94000,22.5,45,High School,Marketing
+101000,6.7,28,Master,Marketing
+92000,21.5,46,High School,Operations
+163800,31.9,51,PhD,Operations
+124300,19.8,42,Master,Operations
+134800,36.2,56,Bachelor,Operations
+85100,8.7,30,High School,Engineering
+97300,3.9,25,Master,Finance
+106400,1.1,22,Master,Engineering
+166400,30.9,52,Master,Finance
+131700,23.3,44,Master,Marketing
+117800,17.7,37,High School,Research
+116700,18.4,40,Bachelor,Marketing
+82000,,26,High School,Engineering
+189600,39.8,62,Master,Engineering
+108000,19.9,39,Master,Operations
+99900,15.6,39,Bachelor,Finance
+125100,26.6,45,High School,Engineering
+120300,19.9,42,Bachelor,Engineering
+90600,15.1,40,Bachelor,Operations
+114400,8.3,30,Master,Engineering
+147400,18.6,42,Master,Research
+179000,35.7,56,PhD,Operations
+148900,27.7,51,Bachelor,Engineering
+136800,30.1,53,High School,Engineering
+95100,6.2,32,Master,Research
+79800,5.1,28,Master,Marketing
+80800,9.2,36,Bachelor,Marketing
+91800,12.8,38,Master,Operations
+153400,27.5,48,Bachelor,Research
+99600,1.6,22,Bachelor,Research
+143500,31.9,53,Bachelor,Operations
+73100,12.1,36,High School,Marketing
+103600,10.9,33,High School,Engineering
+55300,5.0,27,High School,Operations
+85000,0.0,22,Master,Finance
+119300,27.0,46,Bachelor,Marketing
+122000,17.8,38,Bachelor,Research
+118700,,25,PhD,Engineering
+81000,3.1,25,Bachelor,Finance
+109200,12.4,34,Bachelor,Engineering
+155000,27.9,54,Master,Finance
+111900,12.5,35,Bachelor,Engineering
+74700,0.0,22,High School,Engineering
+112900,11.0,35,Bachelor,Engineering
+74400,12.4,35,High School,Finance
+79700,3.6,22,PhD,Operations
+135500,16.3,37,Master,Finance
+114300,11.9,35,Master,Research
+129400,23.1,44,Master,Marketing
+153800,36.8,56,Master,Marketing
+134900,28.8,49,Bachelor,Research
+152300,13.1,35,PhD,Engineering
+95300,2.7,26,Bachelor,Research
+184800,40.0,63,Master,Engineering
+137000,16.8,38,PhD,Research
+115800,17.8,38,Bachelor,Engineering
+110600,16.3,37,High School,Research
+104500,19.1,39,Bachelor,Finance
+114600,12.9,36,Bachelor,Research
+124100,12.6,32,Master,Engineering
+118200,10.4,32,Master,Finance
+115200,19.2,37,High School,Research
+83900,8.6,32,Bachelor,Finance
+110400,11.5,30,Bachelor,Finance
+96300,17.4,39,Bachelor,Operations
+73800,11.7,35,High School,Marketing
+135600,30.0,53,Bachelor,Finance
+106000,0.0,22,PhD,Finance
+138400,,48,Bachelor,Research
+146000,29.0,50,Bachelor,Engineering
+91400,0.0,22,Master,Marketing
+98500,12.0,34,Bachelor,Research
+144600,16.3,34,PhD,Research
+122000,4.5,23,PhD,Marketing
+91500,8.9,30,Bachelor,Finance
+81800,4.1,26,Bachelor,Engineering
+167000,33.2,55,Bachelor,Engineering
+129400,26.2,47,Bachelor,Finance
+124800,26.0,50,High School,Marketing
+132100,22.5,45,Bachelor,Finance
+75300,0.7,26,Bachelor,Engineering
+113300,10.8,32,High School,Research
+127700,21.3,42,Bachelor,Research
+105500,2.0,25,PhD,Operations
+137300,26.1,45,Bachelor,Finance
+82900,10.5,35,High School,Marketing
+91900,9.1,34,Bachelor,Operations
+150400,23.4,45,PhD,Operations
+124300,22.1,42,Bachelor,Engineering
+139100,15.4,34,Master,Research
+154500,26.1,49,Master,Research
+117400,7.2,27,Bachelor,Research
+125800,21.9,44,Master,Operations
+118400,20.7,43,Bachelor,Finance
+110800,13.8,34,Master,Marketing
+134600,20.3,41,Master,Research
+73300,0.0,25,Bachelor,Research
+142000,28.0,47,High School,Engineering
+128400,,36,Master,Engineering
+71500,8.7,32,Bachelor,Marketing
+125100,26.8,48,Bachelor,Operations
+100300,9.0,30,High School,Research
+88100,1.5,23,Bachelor,Engineering
+97000,0.0,22,Master,Finance
+88900,20.7,44,High School,Marketing
+76200,2.9,25,Bachelor,Research
+180200,35.3,55,Bachelor,Research
+97700,1.1,22,Master,Research
+130900,31.3,54,High School,Finance
+134800,19.5,40,Master,Marketing
+105300,9.3,37,Bachelor,Engineering
+149600,12.3,32,PhD,Engineering
+124700,15.5,41,High School,Research
+84500,14.3,37,Bachelor,Operations
+135900,24.8,49,High School,Research
+155100,14.4,39,PhD,Research
+136700,19.3,39,Master,Finance
+96400,11.1,34,Bachelor,Operations
+140300,15.7,37,Master,Research
+148200,18.9,41,Master,Research
+90100,1.0,22,Bachelor,Engineering
+62000,2.2,24,Bachelor,Marketing
+119400,20.4,45,Bachelor,Engineering
+104200,19.0,39,High School,Research
+123500,13.0,36,PhD,Finance
+165500,,38,PhD,Engineering
+105500,18.1,41,Master,Operations
+101200,13.0,32,Bachelor,Finance
+80800,9.7,30,Bachelor,Marketing
+135900,16.3,39,Master,Engineering
+114100,5.3,28,PhD,Operations
+164300,19.4,42,PhD,Finance
+76800,4.2,22,Master,Operations
+150800,26.8,48,Master,Finance
+120700,20.9,42,High School,Research
+104000,20.1,40,High School,Finance
+185700,25.5,47,PhD,Finance
+162000,31.5,54,Bachelor,Research
+114100,25.6,48,High School,Marketing
+70000,0.0,22,High School,Engineering
+111500,2.9,25,Master,Engineering
+68800,10.5,31,High School,Operations
+85000,16.1,38,High School,Finance
+113600,22.5,43,Bachelor,Operations
+106900,7.8,30,Master,Engineering
+130500,17.2,39,Master,Engineering
+92900,4.0,30,Bachelor,Engineering
+113100,10.8,31,Master,Marketing
+76300,1.7,23,Bachelor,Finance
+82000,8.0,28,Bachelor,Marketing
+91300,0.0,24,Master,Marketing
+124600,10.2,28,Master,Research
+161100,25.7,48,Master,Marketing
+112800,8.2,28,Master,Finance
+135900,39.9,64,Bachelor,Operations
+103700,21.2,42,High School,Marketing
+111200,14.9,39,Bachelor,Finance
+107500,5.8,29,Bachelor,Research
+152400,26.8,45,Bachelor,Research
+137800,9.6,32,PhD,Engineering
+112700,17.4,39,Bachelor,Research
+204100,40.0,63,PhD,Finance
+124700,16.0,37,Master,Engineering
+136300,,49,Master,Marketing
+108200,8.7,30,Bachelor,Research
+134500,19.8,37,Bachelor,Finance
+142500,32.9,55,Bachelor,Marketing
+83800,9.4,31,Bachelor,Finance
+184600,36.1,56,Master,Engineering
+149200,25.2,45,Bachelor,Engineering
+88300,12.4,32,High School,Engineering
+148700,23.3,44,Master,Engineering
+118600,22.7,47,High School,Engineering
+169700,25.3,44,PhD,Engineering
+115800,0.0,22,PhD,Finance
+135600,8.6,30,PhD,Engineering
+91400,,35,Bachelor,Marketing
+95800,14.9,37,High School,Research
+160500,22.7,44,PhD,Finance
+104700,17.6,39,Bachelor,Operations
+119400,2.8,24,PhD,Engineering
+184800,22.2,41,PhD,Engineering
+145400,22.9,44,Master,Engineering
+129200,20.5,43,Bachelor,Engineering
+153400,27.9,48,Bachelor,Engineering
+144600,26.4,46,Master,Engineering
+104200,17.5,42,Bachelor,Engineering
+89100,16.2,37,High School,Engineering
+86700,1.4,22,Bachelor,Finance
+157600,19.4,42,PhD,Engineering
+148900,20.8,40,Master,Marketing
+109400,17.7,40,Bachelor,Finance
+51600,3.3,25,High School,Operations
+103200,4.7,27,Bachelor,Engineering
+174500,26.0,48,PhD,Operations
+107300,12.8,37,High School,Finance
+134700,19.1,44,Bachelor,Engineering
+153300,19.2,38,Master,Research
+137700,14.3,38,Master,Research
+156200,23.0,47,Master,Engineering
+102700,5.7,32,Master,Engineering
+83900,14.7,38,Bachelor,Operations
+76100,8.4,33,Bachelor,Operations
+126800,14.3,33,Master,Engineering
+123500,14.0,34,Master,Engineering
+122100,,40,Master,Marketing
+155800,15.5,33,PhD,Finance
+144800,,50,Bachelor,Finance
+88700,6.4,29,Bachelor,Marketing
+99300,9.0,36,Master,Finance
+107700,15.6,33,Master,Operations
+152800,27.2,52,Master,Engineering
+110100,13.7,39,Master,Engineering
+160500,28.0,48,PhD,Operations
+95100,5.9,23,Bachelor,Research
+135500,20.8,40,Bachelor,Finance
+123900,25.1,46,High School,Finance
+110100,17.2,38,Bachelor,Engineering
+129200,27.7,48,High School,Marketing
+110600,11.5,32,Bachelor,Finance
+156700,,52,Bachelor,Engineering
+167600,38.2,60,Bachelor,Engineering
+79900,11.9,34,Bachelor,Marketing
+83500,9.5,33,High School,Engineering
+126400,29.4,52,High School,Marketing
+177200,27.6,53,Master,Engineering
+97400,9.8,32,Bachelor,Marketing
+81200,9.0,33,High School,Engineering
+97800,10.8,35,Bachelor,Research
+95000,2.4,24,Master,Finance
+61200,8.8,28,Bachelor,Operations
+91200,6.8,27,Master,Operations
+68400,4.9,30,High School,Finance
+91000,13.0,37,High School,Engineering
+105400,19.9,40,Bachelor,Finance
+146200,29.0,53,Bachelor,Finance
+80600,5.6,28,Master,Operations
+128100,26.1,47,Master,Marketing
+116800,11.1,35,PhD,Engineering
+96200,15.2,37,Bachelor,Marketing
+122300,19.3,44,Bachelor,Marketing
+109700,2.8,26,Master,Finance
+114900,19.6,41,Bachelor,Finance
+87700,13.8,39,Bachelor,Marketing
+122400,20.9,42,High School,Research
+92200,18.0,40,High School,Finance
+214700,40.0,62,PhD,Engineering
+123500,9.4,31,Master,Engineering
+135500,12.7,32,Master,Engineering
+99400,,31,Bachelor,Engineering
+84000,9.1,32,High School,Engineering
+78200,9.2,31,High School,Engineering
+120000,28.1,49,Bachelor,Marketing
+148200,30.1,52,Bachelor,Engineering
+125500,10.1,32,Master,Research
+115700,5.6,29,Master,Engineering
+109700,,42,Bachelor,Finance
+128700,7.2,32,PhD,Marketing
+156800,25.5,44,Master,Research
+115000,15.5,40,Bachelor,Engineering
+53300,0.0,22,Bachelor,Marketing
+131200,29.6,53,Bachelor,Research
+173500,34.8,55,Bachelor,Research
+82800,8.4,31,Bachelor,Operations
+126300,14.5,34,Master,Engineering
+104700,16.7,40,High School,Engineering
+93700,19.6,41,High School,Operations
+102700,20.3,44,High School,Research
+149200,40.0,58,High School,Finance
+123000,11.6,36,Master,Finance
+103400,8.6,30,Master,Engineering
+66600,,24,Bachelor,Operations
+72900,8.8,30,High School,Engineering
+99200,14.6,37,Bachelor,Marketing
+138200,32.7,55,Bachelor,Marketing
+67700,,32,High School,Finance
+131000,17.7,40,Bachelor,Engineering
+111900,16.9,37,Bachelor,Engineering
+140100,31.4,49,Bachelor,Finance
+173600,39.9,63,Master,Marketing
+85900,7.3,32,High School,Finance
+94800,,33,Bachelor,Engineering
+163400,31.2,48,Master,Finance
